@@ -1,7 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="Icon.png" sizes="16x16">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Titania Lane</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: #68F;
+    }
+    .container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Scale video to fit the screen */
+    }
+    .top-left-image, .top-right-image {
+      position: absolute;
+      top: 20px; /* Adjust the offset as needed */
+      width: 300px; /* Adjust the size as needed */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 5px; /* Adjust the radius as needed */
+      box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 0.5), 4px 0 10px -4px rgba(0, 0, 0, 0.5), -4px 0 10px -4px rgba(0, 0, 0, 0.5);
+    }
+    .top-left-image {
+      left: 20px; /* Adjust the offset as needed */
+    }
+    .top-right-image {
+      right: 20px; /* Adjust the offset as needed */
+    }
+  </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <div class="container">
+    <video autoplay loop muted>
+      <source src="GhostKitchen.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <img src="TitaniaLane.png" alt="Top Left Image" class="top-left-image">
+    <a href="https://store.steampowered.com/" target="_blank">
+      <img src="Small Capsule.png" alt="Top Right Image" class="top-right-image">
+    </a>
+  </div>
 </body>
 </html>
