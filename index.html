@@ -4,7 +4,7 @@
     <link rel="icon" type="image/png" href="Icon.png" sizes="16x16">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titania Lane</title>
+    <title>Titania Lane, Inc.</title>
     <style>
         body {
             margin: 0;
@@ -30,7 +30,7 @@
         .top-left-image, .top-right-image {
             position: absolute;
             top: 2%; /* Adjust the offset as needed */
-            width: 30%; /* Adjust the size as needed */
+            width: 20%; /* Adjust the size as needed */
             height: auto; /* Maintain aspect ratio */
             border-radius: 5px; /* Adjust the radius as needed */
             box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 0.5), 4px 0 10px -4px rgba(0, 0, 0, 0.5), -4px 0 10px -4px rgba(0, 0, 0, 0.5);
@@ -43,6 +43,40 @@
         .top-right-image {
             right: 2%; /* Adjust the offset as needed */
         }
+
+        .info-section {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #4386f7;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .info-column {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0 20px;
+        }
+
+        .info-column strong {
+            font-size: 16px; /* Adjust the font size for headers as needed */
+        }
+
+        .info-column a {
+            color: rgb(15, 15, 15);
+            font-size: 12px; /* Adjust the font size as needed */
+            font-family: Arial, sans-serif;
+            text-decoration: none;
+            margin: 5px 0; /* Adjust the margin between links as needed */
+        }
+
+        .info-column a:hover {
+            color: white; /* Highlight to white on hover */
+        }
     </style>
 </head>
 <body>
@@ -51,10 +85,34 @@
             <source src="GhostKitchen.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+                <a href="https://store.steampowered.com/" target="_blank">
         <img src="TitaniaLane.png" alt="Top Left Image" class="top-left-image">
+                </a>
         <a href="https://store.steampowered.com/" target="_blank">
             <img src="Small Capsule.png" alt="Top Right Image" class="top-right-image">
         </a>
+    </div>
+    <div class="info-section">
+        <div class="info-column">
+            <strong>Titania Lane, Inc.</strong>
+        </div>
+        <div class="info-column">
+            <strong>Contact</strong>
+            <a href="/questions" target="_blank">Questions</a>
+            <a href="/presskit" target="_blank">Press Kit</a>
+        </div>
+        <div class="info-column">
+            <strong>People</strong>
+            <a href="/about" target="_blank">About</a>
+            <a href="/jobs" target="_blank">Jobs</a>
+            <a href="/blog" target="_blank">Blog</a>
+        </div>
+        <div class="info-column">
+            <strong>Administrative</strong>
+            <a href="/terms" target="_blank">Site Terms of Use</a>
+            <a href="/privacy" target="_blank">Privacy Policy</a>
+            <a href="/legal" target="_blank">Legal</a>
+        </div>
     </div>
 </body>
 </html>
