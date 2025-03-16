@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="Icon.png" sizes="16x16">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal - Titania Lane, Inc.</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #000000;
+            position: relative;
+        }
+
+        .container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            opacity: 50%;
+            object-fit: cover;
+        }
+
+        .top-left-image, .top-right-image {
+            position: absolute;
+            top: 2%; 
+            width: 20%; 
+            height: auto; 
+            border-radius: 5px; 
+            box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 0.5), 4px 0 10px -4px rgba(0, 0, 0, 0.5), -4px 0 10px -4px rgba(0, 0, 0, 0.5);
+        }
+        .top-left-image {
+            left: 2%;
+        }
+
+        .top-right-image {
+            right: 2%;
+        }
+
+        .bottom-text {
+            position: absolute;
+            width: 100%;
+            bottom: 25%;
+            text-align: center;
+            font-size: 200%;
+            font-family: Arial, sans-serif;
+            padding: 5px 0;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
+        }
+
+        .bottomer-text {
+            position: absolute;
+            width: 100%;
+            bottom: 15%;
+            text-align: center;
+            font-size: 200%;
+            font-family: Arial, sans-serif;
+            padding: 5px 0;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <video autoplay loop muted playsinline>
+            <source src="GhostKitchen.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <a href="https://www.titanialane.com/" target="_blank">
+            <img src="TitaniaLane.png" alt="Home Button" class="top-left-image">
+        </a>
+        <a href="https://www.titanialane.com/" target="_blank">
+            <img src="Small Capsule.png" alt="Steam Page Button" class="top-right-image">
+        </a>
+        <div class="bottom-text">
+            Copyright © 2025 Titania Lane, Inc. All rights reserved. Titania Lane, the Titania Lane logo, Ghost Kitchen, and the Ghost Kitchen logo are trademarks and/or registered trademarks of Titania Lane, Inc.
+
+
+        </div>
+        <div class="bottomer-text">
+            Titania Lane, Inc. does not collect, process, or sell any user data.
+        </div>
+</body>
+</html>
