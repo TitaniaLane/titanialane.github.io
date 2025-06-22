@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Ghost Kitchen Thumbnail Text Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Jua', sans-serif;
+            color: #e2e2e2;
+            background: #bb444e;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        .top-bar {
+            position: relative;
+            height: 100px;
+        }
+
+        .top-left-image, .top-right-image {
+            position: absolute;
+            top: 0;
+            width: 20%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 1), 4px 0 10px -4px rgba(0, 0, 0, 1), -4px 0 10px -4px rgba(0, 0, 0, 1);
+        }
+
+        .top-left-image {
+            left: 0;
+        }
+
+        .top-right-image {
+            right: 0;
+        }
+
+        .container {
+            background: #6d4434;
+            border-radius: 16px;
+            border-top: 4px solid #3f2820;
+            border-right: 8px solid #3f2820;
+            border-left: 12px solid #3f2820;
+            border-bottom: 12px solid #3f2820;
+            padding: 1.5rem;
+            width: 100%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            margin-top: 1rem;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+
+        p {
+            font-size: 24px;
+        }
+
+        .controls label {
+            display: block;
+            margin: 0.5rem 0;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="color"] {
+            padding: 6px;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+
+        input[type="text"] {
+            width: 90%;
+            box-sizing: border-box;
+        }
+
+        .output-wrapper {
+            border-top: 2px solid #1e1e1e;
+            border-right: 4px solid #1e1e1e;
+            border-left: 6px solid #1e1e1e;
+            border-bottom: 6px solid #1e1e1e;
+            padding: 1rem;
+            border-radius: 8px;
+            background-color: #808080;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #displayText {
+            font-family: 'Jua', sans-serif;
+            word-wrap: break-word;
+        }
+
+        .screenshots {
+            display: block;
+            margin-top: 1rem;
+        }
+
+            .screenshots img {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin-bottom: 1rem;
+                border-top: 2px solid #1e1e1e;
+                border-right: 4px solid #1e1e1e;
+                border-left: 6px solid #1e1e1e;
+                border-bottom: 6px solid #1e1e1e;
+                border-radius: 8px;
+            }
+
+        .assets img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 1rem;
+            border-top: 2px solid #1e1e1e;
+            border-right: 4px solid #1e1e1e;
+            border-left: 6px solid #1e1e1e;
+            border-bottom: 6px solid #1e1e1e;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+
+        .outlinedText {
+            color: #ffffff;
+        }
+
+        .outlinedH1 {
+            font-weight: normal;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="color"] {
+            padding: 6px;
+            font-size: 16px;
+            margin-left: 10px;
+            background-color: #9f9f9f;
+            border-top: 2px solid #1e1e1e;
+            border-right: 4px solid #1e1e1e;
+            border-left: 6px solid #1e1e1e;
+            border-bottom: 6px solid #1e1e1e;
+            border-radius: 8px;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="https://www.titanialane.com/">
+            <img src="TitaniaLane Ghost Kitchen.png" alt="Home Button" class="top-left-image">
+        </a>
+        <a href="https://store.steampowered.com/app/3572120/Ghost_Kitchen/" target="_blank">
+            <img src="Small Capsule.png" alt="Steam Store Button" class="top-right-image">
+        </a>
+    </div>
+
+    <h1 class="outlinedText outlinedH1">Ghost Kitchen Presskit</h1>
+
+    <div class="container">
+        <h1 class="outlinedText outlinedH1">Ghost Kitchen Style Text Generator</h1>
+        <div class="controls">
+            <label class="outlinedText">
+                Text:
+                <input type="text" id="textInput" placeholder="Type your text!" oninput="updateText()" />
+            </label>
+            <label class="outlinedText">
+                Font Size (px):
+                <input type="number" id="fontSizeInput" value="64" oninput="updateText()" />
+            </label>
+            <label class="outlinedText">
+                Font Color:
+                <input type="color" id="fontColorInput" value="#ffffff" oninput="updateText()" />
+            </label>
+            <label class="outlinedText">
+                Outline Thickness (px):
+                <input type="number" id="outlineThicknessInput" value="4" oninput="updateText()" />
+            </label>
+            <label class="outlinedText">
+                Outline Color:
+                <input type="color" id="outlineColorInput" value="#0f0f0f" oninput="updateText()" />
+            </label>
+            <label class="outlinedText">
+                Output Background Color:
+                <input type="color" id="bgColorInput" value="#808080" oninput="updateText()" />
+            </label>
+        </div>
+
+        <div class="output-wrapper" id="outputBox">
+            <div id="displayText">Your text will appear here!</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="outlinedText outlinedH1">Logos and Assets</h1>
+        <p class="outlinedText">Please email Dan@TitaniaLane.com for any bespoke asset requests. ッ </p>
+        <div class="assets">
+            <img src="Main Capsule.png" alt="Main Capsule" />
+            <img src="Header Capsule.png" alt="Header Capsule" />
+            <img src="Header Capsule Alt.png" alt="Header Capsule Alt" />
+            <img src="Vertical Capsule.png" alt="Vertical Capsule" />
+            <img src="Small Capsule.png" alt="Small Capsule" />
+            <img src="Community Icon.png" alt="Community Icon" />
+            <img src="Library Logo.png" alt="Library Logo" />
+            <img src="Ghost Kitchen Trailer.png" alt="Ghost Kitchen Trailer" />
+            <img src="Steam Background.png" alt="Steam Background" />
+            <img src="Butcher.png" alt="Butcher" />
+            <img src="Chefs.png" alt="Chefs" />
+            <img src="TitaniaLane.png" alt="TitaniaLane Logo" />
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="outlinedText outlinedH1">Screenshots</h1>
+
+        <div class="screenshots">
+            <img src="Screenshot Hangout.png" alt="Screenshot Hangout" />
+            <img src="Screenshot Butcher Chase.png" alt="Screenshot Butcher Chase" />
+            <img src="Screenshot Teamwork.png" alt="Screenshot Teamwork" />
+            <img src="Screenshot Pizza SUS.png" alt="Screenshot Pizza SUS" />
+            <img src="Screenshot Cleaning.png" alt="Screenshot Cleaning" />
+            <img src="Screenshot Frozen.png" alt="Screenshot Frozen" />
+            <img src="Screenshot Directions Menu.png" alt="Screenshot Directions Menu" />
+            <img src="Screenshot Cheese.png" alt="Screenshot Cheese" />
+            <img src="Screenshot Burnt Pizza.png" alt="Screenshot Burnt Pizza" />
+            <img src="Screenshot Meeting.png" alt="Screenshot Meeting" />
+        </div>
+    </div>
+
+    <script>
+        function updateText() {
+            const text = document.getElementById('textInput').value;
+            const fontSize = parseInt(document.getElementById('fontSizeInput').value, 10);
+            const fontColor = document.getElementById('fontColorInput').value;
+            const outlineThickness = parseInt(document.getElementById('outlineThicknessInput').value, 10);
+            const outlineColor = document.getElementById('outlineColorInput').value;
+            const bgColor = document.getElementById('bgColorInput').value;
+
+            const display = document.getElementById('displayText');
+            display.textContent = text || 'Your text will appear here!';
+            display.style.fontSize = fontSize + 'px';
+            display.style.color = fontColor;
+
+            const outputBox = document.getElementById('outputBox');
+            outputBox.style.backgroundColor = bgColor;
+
+            const shadows = [];
+            for (let y = -outlineThickness; y <= outlineThickness; y++) {
+                for (let x = -outlineThickness; x <= outlineThickness; x++) {
+                    if (x === 0 && y === 0) continue;
+                    shadows.push(`${x}px ${y}px 0 ${outlineColor}`);
+                }
+            }
+
+            display.style.textShadow = shadows.join(',');
+        }
+
+        function applyOutlineToClass(className, thickness, color) {
+            document.querySelectorAll(`.${className}`).forEach(el => {
+                const shadows = [];
+                for (let y = -thickness; y <= thickness; y++) {
+                    for (let x = -thickness; x <= thickness; x++) {
+                        if (x === 0 && y === 0) continue;
+                        shadows.push(`${x}px ${y}px 0 ${color}`);
+                    }
+                }
+                el.style.textShadow = shadows.join(',');
+            });
+        }
+
+        updateText();
+        applyOutlineToClass('outlinedText', 2, '#1e1e1e');
+        applyOutlineToClass('outlinedH1', 3, '#1e1e1e');
+    </script>
+</body>
+</html>
