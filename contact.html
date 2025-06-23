@@ -37,6 +37,15 @@
             border-radius: 5px;
             box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 1), 4px 0 10px -4px rgba(0, 0, 0, 1), -4px 0 10px -4px rgba(0, 0, 0, 1);
         }
+
+        .top-left-image {
+            left: 2%;
+        }
+
+        .top-right-image {
+            right: 2%;
+        }
+
         .middle-image {
             position: absolute;
             bottom: 2%;
@@ -47,48 +56,31 @@
             filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 1));
         }
 
-        .top-left-image {
-            left: 2%;
-        }
-
-        .top-right-image {
-            right: 2%;
-        }
-
-        .top-left-image, .top-right-image {
-            position: absolute;
-            top: 2%;
-            width: 20%;
-            height: auto;
-            border-radius: 5px;
-            box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 1), 4px 0 10px -4px rgba(0, 0, 0, 1), -4px 0 10px -4px rgba(0, 0, 0, 1);
-        }
         .text-wrapper {
             position: absolute;
-            top: 20%;
-            left: 2%;
-            width: 28%;
-        }
-
-        .middle-text, .middler-text {
-            font-family: Arial, sans-serif;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            margin-bottom: 10px;
-            text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            text-align: center;
+            padding: 1rem;
         }
 
         .middle-text {
             font-weight: bold;
-            font-size: 250%;
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
             color: #4386f7;
+            font-family: Arial, sans-serif;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
+            margin-bottom: 0.5rem;
         }
 
         .middler-text {
-            font-size: 125%;
+            font-size: clamp(1rem, 2vw, 1.25rem);
             color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
         }
-
     </style>
 </head>
 <body>
@@ -97,16 +89,22 @@
             <source src="GhostKitchen.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+
         <a href="https://www.titanialane.com/">
             <img src="TitaniaLane.png" alt="Home Button" class="top-left-image">
         </a>
+
         <a href="https://store.steampowered.com/app/3572120/Ghost_Kitchen/" target="_blank">
             <img src="Small Capsule.png" alt="Steam Page Button" class="top-right-image">
         </a>
+
         <div class="text-wrapper">
             <div class="middle-text">Contact Us!</div>
-            <div class="middler-text">Have any Questions, Comments, and Concerns? Localization Fixes? Media Inquiries? Key Requests? You've made it to the right place!</div>
+            <div class="middler-text">
+                Have any Questions, Comments, and Concerns? Localization Fixes? Media Inquiries? Key Requests? You've made it to the right place!
+            </div>
         </div>
+
         <img src="Email.png" alt="Email Address" class="middle-image">
     </div>
 </body>
