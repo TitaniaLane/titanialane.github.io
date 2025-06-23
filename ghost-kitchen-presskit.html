@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/png" href="Icon.png" sizes="16x16">
     <meta charset="UTF-8" />
-    <title>Ghost Kitchen Press kit</title>
+    <title>Ghost Kitchen Press Kit</title>
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
     <style>
         body {
@@ -125,6 +126,19 @@
             object-fit: contain;
         }
 
+        .desc img {
+            inline-block;
+            max-width: 100%;
+            margin-bottom: 1rem;
+            border-top: 2px solid #1e1e1e;
+            border-right: 4px solid #1e1e1e;
+            border-left: 6px solid #1e1e1e;
+            border-bottom: 6px solid #1e1e1e;
+            border-radius: 8px;
+            object-fit: contain;
+            margin-right: 1rem;
+        }
+
         .outlinedText {
             color: #ffffff;
         }
@@ -159,140 +173,151 @@
         </a>
     </div>
 
-    <h1 class="outlinedText outlinedH1">Ghost Kitchen Press kit</h1>
+    <h1 class="outlinedText outlinedH1">Ghost Kitchen Press Kit</h1>
 
     <div class="container">
-        <h1 class="outlinedText outlinedH1">Ghost Kitchen Style Text Generator</h1>
-        <div class="controls">
-            <label class="outlinedText">
-                Text:
-                <input type="text" id="textInput" placeholder="Type your text!" oninput="updateText()" />
-            </label>
-            <label class="outlinedText">
-                Font Size (px):
-                <input type="number" id="fontSizeInput" value="64" oninput="updateText()" />
-            </label>
-            <label class="outlinedText">
-                Font Color:
-                <input type="color" id="fontColorInput" value="#ffffff" oninput="updateText()" />
-            </label>
-            <label class="outlinedText">
-                Outline Thickness (px):
-                <input type="number" id="outlineThicknessInput" value="4" oninput="updateText()" />
-            </label>
-            <label class="outlinedText">
-                Outline Color:
-                <input type="color" id="outlineColorInput" value="#0f0f0f" oninput="updateText()" />
-            </label>
-            <label class="outlinedText">
-                Output Background Color:
-                <input type="color" id="bgColorInput" value="#808080" oninput="updateText()" />
-            </label>
-        </div>
-
-        <div class="output-wrapper" id="outputBox">
-            <div id="displayText">Your text will appear here!</div>
-        </div>
-    </div>
-
-    <div class="container">
-        <h1 class="outlinedText outlinedH1">Logos and Assets</h1>
-        <p class="outlinedText">Please email Dan@TitaniaLane.com for any bespoke asset requests. ッ </p>
-        <div class="assets">
-            <img src="Main Capsule.png" alt="Main Capsule" />
-            <img src="Header Capsule.png" alt="Header Capsule" />
-            <img src="Header Capsule Alt.png" alt="Header Capsule Alt" />
-            <img src="Vertical Capsule.png" alt="Vertical Capsule" />
-            <img src="Small Capsule.png" alt="Small Capsule" />
-            <img src="Community Icon.png" alt="Community Icon" />
-            <img src="Library Logo.png" alt="Library Logo" />
-            <img src="Ghost Kitchen Trailer.png" alt="Ghost Kitchen Trailer" />
-            <img src="Hats.png" alt="Hats" />
-            <img src="Devil.png" alt="Devil" />
-            <img src="Like.png" alt="Like" />
-            <img src="Attack.png" alt="Attack" />
-            <img src="Order.png" alt="Order" />
-            <img src="Hide.png" alt="Hide" />
-            <img src="Steam Background.png" alt="Steam Background" />
+        <h1 class="outlinedText outlinedH1">About Ghost Kitchen</h1>
+        <p class="outlinedText">
+            Ghost Kitchen is an Online Multiplayer Steam game with up to 16 friends, taking on the role of either Chef or Butcher.
+            Chefs win by completing orders flawlessly or uncovering the butchers and voting them out of the kitchen.
+            Butchers aim to sabotage orders and turn innocent chefs into mincemeat. Keep things fresh with 4 unique maps and 2 different food types to choose from.
+        </p>
+        <div class="desc">
             <img src="Butcher.png" alt="Butcher" />
             <img src="Chefs.png" alt="Chefs" />
-            <img src="TitaniaLane.png" alt="TitaniaLane Logo" />
         </div>
-    </div>
-
-    <div class="container">
-        <h1 class="outlinedText outlinedH1">Screenshots</h1>
-
-        <div class="screenshots">
-            <img src="Screenshot Hangout.png" alt="Screenshot Hangout" />
-            <img src="Screenshot Butcher Chase.png" alt="Screenshot Butcher Chase" />
-            <img src="Screenshot Teamwork.png" alt="Screenshot Teamwork" />
-            <img src="Screenshot Pizza SUS.png" alt="Screenshot Pizza SUS" />
-            <img src="Screenshot Cleaning.png" alt="Screenshot Cleaning" />
-            <img src="Screenshot Frozen.png" alt="Screenshot Frozen" />
-            <img src="Screenshot Directions Menu.png" alt="Screenshot Directions Menu" />
-            <img src="Screenshot Cheese.png" alt="Screenshot Cheese" />
-            <img src="Screenshot Burnt Pizza.png" alt="Screenshot Burnt Pizza" />
-            <img src="Screenshot Meeting.png" alt="Screenshot Meeting" />
         </div>
-    </div>
 
-    <div class="container">
-        <h1 class="outlinedText outlinedH1">Backgrounds</h1>
-        <div class="assets">
-            <img src="FloorA.png" alt="Floor A" />
-            <img src="FloorB.png" alt="Floor B" />
-            <img src="FloorC.png" alt="Floor C" />
-            <img src="FloorD.png" alt="Floor D" />
-            <img src="FloorE.png" alt="Floor E" />
-            <img src="FloorF.png" alt="Floor F" />
+        <div class="container">
+            <h1 class="outlinedText outlinedH1">Ghost Kitchen Style Text Generator</h1>
+            <div class="controls">
+                <label class="outlinedText">
+                    Text:
+                    <input type="text" id="textInput" placeholder="Type your text!" oninput="updateText()" />
+                </label>
+                <label class="outlinedText">
+                    Font Size (px):
+                    <input type="number" id="fontSizeInput" value="64" oninput="updateText()" />
+                </label>
+                <label class="outlinedText">
+                    Font Color:
+                    <input type="color" id="fontColorInput" value="#ffffff" oninput="updateText()" />
+                </label>
+                <label class="outlinedText">
+                    Outline Thickness (px):
+                    <input type="number" id="outlineThicknessInput" value="4" oninput="updateText()" />
+                </label>
+                <label class="outlinedText">
+                    Outline Color:
+                    <input type="color" id="outlineColorInput" value="#0f0f0f" oninput="updateText()" />
+                </label>
+                <label class="outlinedText">
+                    Output Background Color:
+                    <input type="color" id="bgColorInput" value="#808080" oninput="updateText()" />
+                </label>
+            </div>
+
+            <div class="output-wrapper" id="outputBox">
+                <div id="displayText">Your text will appear here!</div>
+            </div>
         </div>
-    </div>
 
-    <script>
-        function updateText() {
-            const text = document.getElementById('textInput').value;
-            const fontSize = parseInt(document.getElementById('fontSizeInput').value, 10);
-            const fontColor = document.getElementById('fontColorInput').value;
-            const outlineThickness = parseInt(document.getElementById('outlineThicknessInput').value, 10);
-            const outlineColor = document.getElementById('outlineColorInput').value;
-            const bgColor = document.getElementById('bgColorInput').value;
+        <div class="container">
+            <h1 class="outlinedText outlinedH1">Logos and Assets</h1>
+            <p class="outlinedText">Please email Dan@TitaniaLane.com for any bespoke asset requests. ッ </p>
+            <div class="assets">
+                <img src="Main Capsule.png" alt="Main Capsule" />
+                <img src="Header Capsule.png" alt="Header Capsule" />
+                <img src="Header Capsule Alt.png" alt="Header Capsule Alt" />
+                <img src="Vertical Capsule.png" alt="Vertical Capsule" />
+                <img src="Small Capsule.png" alt="Small Capsule" />
+                <img src="Community Icon.png" alt="Community Icon" />
+                <img src="Library Logo.png" alt="Library Logo" />
+                <img src="Ghost Kitchen Trailer.png" alt="Ghost Kitchen Trailer" />
+                <img src="Hats.png" alt="Hats" />
+                <img src="Devil.png" alt="Devil" />
+                <img src="Like.png" alt="Like" />
+                <img src="Attack.png" alt="Attack" />
+                <img src="Order.png" alt="Order" />
+                <img src="Hide.png" alt="Hide" />
+                <img src="Steam Background.png" alt="Steam Background" />
+                <img src="TitaniaLane.png" alt="TitaniaLane Logo" />
+            </div>
+        </div>
 
-            const display = document.getElementById('displayText');
-            display.textContent = text || 'Your text will appear here!';
-            display.style.fontSize = fontSize + 'px';
-            display.style.color = fontColor;
+        <div class="container">
+            <h1 class="outlinedText outlinedH1">Screenshots</h1>
 
-            const outputBox = document.getElementById('outputBox');
-            outputBox.style.backgroundColor = bgColor;
+            <div class="screenshots">
+                <img src="Screenshot Hangout.png" alt="Screenshot Hangout" />
+                <img src="Screenshot Butcher Chase.png" alt="Screenshot Butcher Chase" />
+                <img src="Screenshot Teamwork.png" alt="Screenshot Teamwork" />
+                <img src="Screenshot Pizza SUS.png" alt="Screenshot Pizza SUS" />
+                <img src="Screenshot Cleaning.png" alt="Screenshot Cleaning" />
+                <img src="Screenshot Frozen.png" alt="Screenshot Frozen" />
+                <img src="Screenshot Directions Menu.png" alt="Screenshot Directions Menu" />
+                <img src="Screenshot Cheese.png" alt="Screenshot Cheese" />
+                <img src="Screenshot Burnt Pizza.png" alt="Screenshot Burnt Pizza" />
+                <img src="Screenshot Meeting.png" alt="Screenshot Meeting" />
+            </div>
+        </div>
 
-            const shadows = [];
-            for (let y = -outlineThickness; y <= outlineThickness; y++) {
-                for (let x = -outlineThickness; x <= outlineThickness; x++) {
-                    if (x === 0 && y === 0) continue;
-                    shadows.push(`${x}px ${y}px 0 ${outlineColor}`);
-                }
-            }
+        <div class="container">
+            <h1 class="outlinedText outlinedH1">Backgrounds</h1>
+            <div class="assets">
+                <img src="FloorA.png" alt="Floor A" />
+                <img src="FloorB.png" alt="Floor B" />
+                <img src="FloorC.png" alt="Floor C" />
+                <img src="FloorD.png" alt="Floor D" />
+                <img src="FloorE.png" alt="Floor E" />
+                <img src="FloorF.png" alt="Floor F" />
+            </div>
+        </div>
 
-            display.style.textShadow = shadows.join(',');
-        }
+        <script>
+            function updateText() {
+                const text = document.getElementById('textInput').value;
+                const fontSize = parseInt(document.getElementById('fontSizeInput').value, 10);
+                const fontColor = document.getElementById('fontColorInput').value;
+                const outlineThickness = parseInt(document.getElementById('outlineThicknessInput').value, 10);
+                const outlineColor = document.getElementById('outlineColorInput').value;
+                const bgColor = document.getElementById('bgColorInput').value;
 
-        function applyOutlineToClass(className, thickness, color) {
-            document.querySelectorAll(`.${className}`).forEach(el => {
+                const display = document.getElementById('displayText');
+                display.textContent = text || 'Your text will appear here!';
+                display.style.fontSize = fontSize + 'px';
+                display.style.color = fontColor;
+
+                const outputBox = document.getElementById('outputBox');
+                outputBox.style.backgroundColor = bgColor;
+
                 const shadows = [];
-                for (let y = -thickness; y <= thickness; y++) {
-                    for (let x = -thickness; x <= thickness; x++) {
+                for (let y = -outlineThickness; y <= outlineThickness; y++) {
+                    for (let x = -outlineThickness; x <= outlineThickness; x++) {
                         if (x === 0 && y === 0) continue;
-                        shadows.push(`${x}px ${y}px 0 ${color}`);
+                        shadows.push(`${x}px ${y}px 0 ${outlineColor}`);
                     }
                 }
-                el.style.textShadow = shadows.join(',');
-            });
-        }
 
-        updateText();
-        applyOutlineToClass('outlinedText', 2, '#1e1e1e');
-        applyOutlineToClass('outlinedH1', 3, '#1e1e1e');
-    </script>
+                display.style.textShadow = shadows.join(',');
+            }
+
+            function applyOutlineToClass(className, thickness, color) {
+                document.querySelectorAll(`.${className}`).forEach(el => {
+                    const shadows = [];
+                    for (let y = -thickness; y <= thickness; y++) {
+                        for (let x = -thickness; x <= thickness; x++) {
+                            if (x === 0 && y === 0) continue;
+                            shadows.push(`${x}px ${y}px 0 ${color}`);
+                        }
+                    }
+                    el.style.textShadow = shadows.join(',');
+                });
+            }
+
+            updateText();
+            applyOutlineToClass('outlinedText', 2, '#1e1e1e');
+            applyOutlineToClass('outlinedH1', 3, '#1e1e1e');
+        </script>
 </body>
 </html>
