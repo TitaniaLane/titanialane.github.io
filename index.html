@@ -28,31 +28,49 @@
             object-fit: cover;
         }
 
-        .top-left-image, .top-right-image {
+        .top-left-image, .bottom-left-image {
             position: absolute;
-            top: 2%;
+            left: 2%;
             width: 20%;
             height: auto;
             border-radius: 5px;
             box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 1), 4px 0 10px -4px rgba(0, 0, 0, 1), -4px 0 10px -4px rgba(0, 0, 0, 1);
         }
 
-        .bottom-left-image, .bottom-right-image {
+        .top-left-image {
+            top: 2%;
+        }
+
+        .bottom-left-image {
+            bottom: 2%;
+        }
+
+        .bottom-right-image {
             position: absolute;
             bottom: 2%;
+            right: 2%;
             width: 20%;
             height: auto;
             border-radius: 5px;
             box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 1), 4px 0 10px -4px rgba(0, 0, 0, 1), -4px 0 10px -4px rgba(0, 0, 0, 1);
         }
 
-        .top-left-image, .bottom-left-image {
-            left: 2%; 
+        .top-right-stack {
+            position: absolute;
+            top: 2%;
+            right: 2%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 20%;
         }
 
-        .top-right-image, .bottom-right-image {
-            right: 2%;
-        }
+            .top-right-stack img {
+                width: 100%;
+                height: auto;
+                border-radius: 5px;
+                box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 1), 4px 0 10px -4px rgba(0, 0, 0, 1), -4px 0 10px -4px rgba(0, 0, 0, 1);
+            }
 
         .text-wrapper {
             position: absolute;
@@ -79,7 +97,6 @@
             font-size: 125%;
             color: #ffffff;
         }
-
     </style>
 </head>
 <body>
@@ -88,19 +105,32 @@
             <source src="GhostKitchen.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+
         <a href="https://www.titanialane.com/">
             <img src="TitaniaLane.png" alt="Home Button" class="top-left-image">
         </a>
-        <a href="https://store.steampowered.com/app/3572120/Ghost_Kitchen/" target="_blank">
-            <img src="Small Capsule.png" alt="Steam Store Button" class="top-right-image">
-        </a>
+
+        <div class="top-right-stack">
+            <a href="https://store.steampowered.com/app/3572120/Ghost_Kitchen/" target="_blank">
+                <img src="Small Capsule.png" alt="Steam Store Button">
+            </a>
+            <a href="https://www.titanialane.com/ghost-kitchen-presskit" target="_blank">
+                <img src="Ghost Kitchen Press Kit.png" alt="Ghost Kitchen Press Kit">
+            </a>
+        </div>
+
         <div class="text-wrapper">
             <div class="middle-text">Childhood Best Friends making Games.</div>
-            <div class="middler-text">We are part-time, after-work game developers, working on projects that we find interesting. We hope you find them interesting as well.</div>
+            <div class="middler-text">
+                We are part-time, after-work game developers, working on projects that we find interesting.
+                We hope you find them interesting as well.
+            </div>
         </div>
+
         <a href="https://www.titanialane.com/contact">
             <img src="Contact.png" alt="Contact Button" class="bottom-left-image">
         </a>
+
         <a href="https://www.titanialane.com/legal">
             <img src="Legal.png" alt="Legal Button" class="bottom-right-image">
         </a>
